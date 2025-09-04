@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="16x16 32x32 64x64 192x192" href="/icône-taches1.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icône-taches1.png" />
+    <link rel="shortcut icon" href="/icône-taches1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionnaire de Tâches</title>
+    <script>
+      // Applique le thème stocké (ou la préférence système) le plus tôt possible pour éviter le flash
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = stored ? stored === 'dark' : prefersDark;
+          if (isDark) document.documentElement.classList.add('dark');
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

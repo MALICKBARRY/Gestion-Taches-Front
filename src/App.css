@@ -1,0 +1,11 @@
+/* Nettoyage des styles par défaut du template Vite pour éviter les conflits avec Tailwind */
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+}
+
+/* Ajoutez ici des styles globaux spécifiques si nécessaire */
