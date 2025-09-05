@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '375px',
+      },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },

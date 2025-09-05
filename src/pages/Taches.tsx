@@ -41,14 +41,20 @@ function Taches() {
 
   return (
     <div>
-       <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent text-center">
-          Mes Taches 📝
+       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent text-center px-1 sm:px-2">
+          Mes Tâches 📝
        </h2>
 
        {/* Compteur des tâches */}
-      <p className="mt-4 text-gray-600 font-medium text-center">
-        Total : {taches.length} | Fait : {taches.filter((t) => t.done).length} | À faire : {taches.filter((t) => !t.done).length}
-      </p><br />
+      <div className="mt-2 sm:mt-3 md:mt-4 text-center px-1 sm:px-2">
+        <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium">
+          <span className="inline-block">Total: {taches.length}</span>
+          <span className="mx-1 sm:mx-2">|</span>
+          <span className="inline-block">Fait: {taches.filter((t) => t.done).length}</span>
+          <span className="mx-1 sm:mx-2">|</span>
+          <span className="inline-block">À faire: {taches.filter((t) => !t.done).length}</span>
+        </p>
+      </div><br />
 
 
       {/* Formulaire avec callback pour ajouter */}

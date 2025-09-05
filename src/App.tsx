@@ -58,8 +58,8 @@ function App() {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-100 via-white to-gray-200 dark:from-gray-900 dark:via-gray-950 dark:to-black transition-colors">
       {/* Navbar */}
       <nav className="backdrop-blur bg-white/70 dark:bg-gray-900/60 border-b border-gray-100/60 dark:border-gray-800 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 tracking-wide texte-align-center">
+        <div className="max-w-6xl mx-auto px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-4 flex justify-between items-center">
+          <h1 className="text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-blue-600 dark:text-blue-400 tracking-wide truncate pr-1 sm:pr-2">
             Gestionnaire de Tâches
           </h1>
           <div className="flex items-center gap-2">
@@ -144,7 +144,7 @@ function App() {
         </div>
       {menuOpen && (
         <div className="md:hidden border-t border-gray-100/60 dark:border-gray-800">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-gray-700 dark:text-gray-300 font-medium">
+          <div className="max-w-6xl mx-auto px-3 py-3 flex flex-col gap-3 text-gray-700 dark:text-gray-300 font-medium">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -191,7 +191,7 @@ function App() {
       </nav>
 
       {/* Main content */}
-      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <main className="flex-1 max-w-6xl mx-auto px-2 sm:px-3 md:px-6 py-4 sm:py-6 md:py-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tache" element={<Taches />} />
@@ -202,8 +202,8 @@ function App() {
       <BackToTop />
 
       {/* Footer */}
-      <footer className="bg-white/70 dark:bg-gray-900/60 border-t border-gray-100/60 dark:border-gray-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-center text-base text-gray-500">
+      <footer className="w-full bg-white/70 dark:bg-gray-900/60 border-t border-gray-100/60 dark:border-gray-800">
+        <div className="w-full px-2 sm:px-3 md:px-6 py-4 text-center text-sm sm:text-base text-gray-500">
           © {new Date().getFullYear()} Gestionnaire de Tâches – Tous droits réservés.
         </div>
       </footer>
